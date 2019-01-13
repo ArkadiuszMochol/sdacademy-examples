@@ -282,6 +282,53 @@ klienci naszych klas dostają to, czego naprawdę potrzebują, a nie poszczegól
 
 ##### Wzorce projektowe (TODO)
 
+## Git
+Git – rozproszony system kontroli wersji. Stworzył go Linus Torvalds jako narzędzie wspomagające rozwój jądra Linux. Git stanowi wolne oprogramowanie i został opublikowany na licencji GNU GPL w wersji 2.
+
+Pierwsza wersja narzędzia Git została wydana 7 kwietnia 2005 roku, by zastąpić poprzednio używany w rozwoju Linuksa, niebędący wolnym oprogramowaniem, system kontroli wersji BitKeeper.
+
+Źródło: [Wikipedia](https://pl.wikipedia.org/wiki/Git_(oprogramowanie))
+
+#### Jak rozpocząć
+Zasadniczo są możliwe dwa główne scenariusze.
+
+##### Gdy jest już gotowe zdalne repo
+
+1. ``git clone <adres-do-zdalnego repo>``
+2. ``git fetch|pull`` aby zaciągnąc zmiany ze zdalnego repo
+3. ``git push`` aby zaktualizować zdalnego brancha
+
+W tym scenariuszu po sklonowaniu zdalnego repo mamy już z automatu ustawionego domyślnego upstreama o nazwie 
+``origin``, który wskazuje na adres z którego sklonowaliśmy repo. Możemy zobaczyć to po wydaniu komendy
+ 
+``git remote -v``
+
+Jeśli chcemy stworzyć nowego lokalnego brancha i umieścić go na zdalnym repozytorium możemy użyć komendy
+
+``git push -u origin new-branch``
+
+Od tego momentu możemy łatwo pobierać zmiany z nowego zdalnego brancha za pomocą
+
+``git pull``
+
+##### Gdy tworzymy całkowicie nowe lokalne repo
+
+1. ``git init``
+2. ``git remote add <nazwa-upstreama> <adres-zdalnego-repo>`` aby rozpocząć pracę ze zdalnym repo
+
+Wszystkie inne operacje tak samo jak w poprzedniej sekcji.
+
+##### Jak synchronizować swojego forka z oryginalnym repo
+
+1. Dodać nowego remote'a  wskazującego na oryginalne repo - ``git remote add <upstream> <adres-oryginalnego-repo>``
+2. ``git fetch <upstream>``
+3. ``git merge <upstream>/<zdalny-branch>``
+
+[Oficjalna dokumentacja GitHuba](https://help.github.com/articles/syncing-a-fork/)
+
+##### Szczegółowe informacje na temat GITa
+https://git-scm.com/book/pl/v1/Pierwsze-kroki-Podstawy-Git
+
 ## Ogólne
 
 ##### API (Application Programming Iterface) (TODO)
