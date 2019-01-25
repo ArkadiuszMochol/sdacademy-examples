@@ -1,6 +1,7 @@
 package pl.sdacademy.tdd;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 import pl.sdacademy.tdd.temperature.Coordinates;
 import pl.sdacademy.tdd.temperature.TemperatureConverter;
