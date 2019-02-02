@@ -5,16 +5,16 @@ import pl.sdacademy.patterns.facade.example.*;
 public class AppBootstrapper {
 
 	static void start() {
-		SmartHome smartHome = new SmartHome(
+		SmartHomeFacade smartHomeFacade = new SmartHomeFacade(
 				new AudioSystemImpl(),
 				new CoffeeMakerImpl(),
 				new GarageDoorImpl(),
 				new LightImpl());
 
-		smartHome.enterHome();
+		smartHomeFacade.enterHome();
 
-		smartHome.party();
+		smartHomeFacade.party();
 
-		smartHome.leaveHome();
+		smartHomeFacade.leaveHome();
 	}
 }

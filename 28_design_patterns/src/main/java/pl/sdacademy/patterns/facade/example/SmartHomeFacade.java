@@ -1,13 +1,13 @@
 package pl.sdacademy.patterns.facade.example;
 
-public class SmartHome {
+public class SmartHomeFacade {
 
     private AudioSystem audioSystem;
     private CoffeeMaker coffeeMaker;
     private GarageDoor garageDoor;
     private Light light;
 
-    public SmartHome(AudioSystem audioSystem, CoffeeMaker coffeeMaker, GarageDoor garageDoor, Light light) {
+    public SmartHomeFacade(AudioSystem audioSystem, CoffeeMaker coffeeMaker, GarageDoor garageDoor, Light light) {
         this.audioSystem = audioSystem;
         this.coffeeMaker = coffeeMaker;
         this.garageDoor = garageDoor;
@@ -15,7 +15,7 @@ public class SmartHome {
     }
 
     public void enterHome() {
-        System.out.printf("### SmartHome: the owners is entering the house - lets welcome them! ###");
+        System.out.printf("### SmartHomeFacade: the owners is entering the house - lets welcome them! ###");
         garageDoor.open();
         audioSystem.turnOn();
         audioSystem.setVolume(20);
@@ -28,7 +28,7 @@ public class SmartHome {
     }
 
     public void leaveHome() {
-        System.out.println("### SmartHome: the owners are leaving the home - turn everything off ###");
+        System.out.println("### SmartHomeFacade: the owners are leaving the home - turn everything off ###");
         audioSystem.turnOff();
         light.turnOff();
         coffeeMaker.turnOff();
@@ -36,7 +36,7 @@ public class SmartHome {
     }
 
     public void party() {
-        System.out.println("### SmartHome: lets start the party! ###");
+        System.out.println("### SmartHomeFacade: lets start the party! ###");
         garageDoor.open();
         audioSystem.turnOn();
         audioSystem.setVolume(100);

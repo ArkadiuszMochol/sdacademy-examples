@@ -26,5 +26,7 @@ public class AppBootstrapper {
 				types.stream().map(type -> italianPizzeria.orderPizza(type))
 						.collect(Collectors.toList())
 		);
+
+		System.out.println(pizzas);
 	}
 }
