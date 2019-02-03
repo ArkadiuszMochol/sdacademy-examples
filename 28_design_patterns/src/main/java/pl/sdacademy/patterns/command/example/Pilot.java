@@ -11,14 +11,24 @@ public class Pilot {
 
     public void defineNewCommand(int buttonNumber, Command command) {
         buttonToCommandMap.put(buttonNumber, command);
-        buttonToModeMap.put(buttonNumber, false);
+        buttonToModeMap.put(buttonNumber, true);
     }
 
     public void push(int buttonNumber) {
-        Optional.of(buttonNumber)
-                .map(number -> buttonToCommandMap.get(number))
-                .ifPresent(Command::execute);
-
+        if (buttonToCommandMap.containsKey(buttonNumber)) {
+            handleButtonPush(buttonNumber);
+        }
     }
 
+    private void handleButtonPush(int buttonNumber) {
+        boolean shouldExecute = buttonToModeMap.get(buttonNumber);
+        Command command = buttonToCommandMap.get(buttonNumber);
+
+        if (shouldExecute) {
+            command.execute();
+        } else {
+            command.undo();
+        }
+        buttonToModeMap.put(buttonNumber, !shouldExecute);
+    }
 }

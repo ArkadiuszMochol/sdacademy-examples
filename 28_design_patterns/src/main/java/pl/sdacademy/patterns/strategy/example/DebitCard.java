@@ -8,11 +8,11 @@ public class DebitCard extends Card {
 
     @Override
     protected String getType() {
-        return null;
+        return "debit";
     }
 
     @Override
     protected void executeTransaction(int cents) {
-
+        System.out.println("Obciążanie konta użytkownika kwotą " + cents);
     }
 }

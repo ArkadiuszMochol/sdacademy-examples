@@ -16,10 +16,13 @@ public class Tv {
     }
 
     public void previous() {
-        int nextChannel = (currentChannel - 1) % channels.size();
-        String channel = channels.get(nextChannel);
+        int previousChannel = (currentChannel - 1);
+        if (previousChannel < 0) {
+            previousChannel = channels.size() - 1;
+        }
+        String channel = channels.get(previousChannel);
         System.out.println("Changing channel to " + channel);
-        currentChannel = nextChannel;
+        currentChannel = previousChannel;
     }
 
 }

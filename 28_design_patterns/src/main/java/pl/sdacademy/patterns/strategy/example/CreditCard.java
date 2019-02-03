@@ -8,11 +8,11 @@ public class CreditCard extends Card {
 
     @Override
     protected String getType() {
-        return null;
+        return "credit";
     }
 
     @Override
     protected void executeTransaction(int cents) {
-
+        System.out.println("Obciążanie linii kredytowej użytkownika kwotą " + cents);
     }
 }

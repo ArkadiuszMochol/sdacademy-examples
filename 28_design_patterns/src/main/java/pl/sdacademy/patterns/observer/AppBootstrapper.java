@@ -18,5 +18,9 @@ public class AppBootstrapper {
 
 		tempSensor.unsubscribe(clock);
 		tempSensor.simulateTemperatureChange(30);
+
+		tempSensor.subscribe(new SmartPhone());
+		tempSensor.simulateTemperatureChange(10);
+		tempSensor.simulateTemperatureChange(-2);
 	}
 }
