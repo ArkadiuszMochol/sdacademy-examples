@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Producent implements Runnable {
 
-    private static String[] NAPISY = {"ALA", "KOT", "PIES", "ŻABA"};
+    private static final String[] NAPISY = {"ALA", "KOT", "PIES", "ŻABA"};
     private Pudelko pudelko;
     private Random randomGenerator = new Random();
 

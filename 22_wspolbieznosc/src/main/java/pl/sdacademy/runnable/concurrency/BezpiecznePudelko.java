@@ -1,5 +1,7 @@
 package pl.sdacademy.runnable.concurrency;
 
+import java.sql.SQLOutput;
+
 public class BezpiecznePudelko implements Pudelko { //pudełko jest współdzielonym między wątki zasobem, służącym do
     // wymiany
     // np.
@@ -16,6 +18,7 @@ public class BezpiecznePudelko implements Pudelko { //pudełko jest współdziel
                 e.printStackTrace();
             }
         }
+
         zawartosc = nowaZawartosc; //kiedy pudełko jest już puste, wątek Producenta może w końcu włożyć do niego swoją zawartość
         notifyAll(); //następnie powiadamia inne wątki, że mogą próbować coś włożyć do pudełka
         return true;

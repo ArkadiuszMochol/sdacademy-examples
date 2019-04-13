@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class Main {
 
     public static void main(String[] args) {
-        /*
+
         MyThread myThread = new MyThread(); //tworzymy obiekt wątku
         myThread.start(); //metoda start uruchamia nowy wątek
         try {
@@ -21,7 +21,7 @@ public class Main {
         myThread.zatrzymaj(); //dodatkowa metoda zatrzymaj spowoduje, że warunek pętli nie zostanie spełniony. Nie mamy jednak pewności w którym miejscu jest aktualnie wątek myThread - może więc się okazać, że zanim zostanie zakończony to wypisze jeszcze raz na konsoli i zaśnie, dopiero potem przejdzie do warunku pętli i się zatrzyma
 
         System.out.println("wszyscy skonczyli pracę, kończę program");
-        */
+
 
 
         ExecutorService executorService = Executors.newFixedThreadPool(10); //obiekty executor service służą do zarządzania życiem tworzonych przez nas wątków. Jest ich kilka typów - w naszym przypadku używamy serwisu ze stałą ilością wątków

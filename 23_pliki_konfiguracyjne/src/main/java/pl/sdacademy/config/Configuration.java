@@ -1,5 +1,6 @@
 package pl.sdacademy.config;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 import java.util.Date;
@@ -11,6 +12,16 @@ public class Configuration { // klasa configuration służy do reprezentacji pli
     Map<String, String> users; //mapy odzwierciedlone są przez przypisania w yamlu z użyciem ":", np. prezes : tomek itd.
     List<String> fileExtensions; //listy w yamlu definiowane są przez rozpoczęcie elementu od myślnika, np - element1
 
+    public Map<String, List<String>> getBestSongs() {
+        return bestSongs;
+    }
+
+    public void setBestSongs(Map<String, List<String>> bestSongs) {
+        this.bestSongs = bestSongs;
+    }
+
+    Map<String, List<String>> bestSongs; //mapa - klucz: gatunek, lista: piosenki z danego gatunku
+
     public String getVersion() {
         return version;
     }
@@ -21,6 +32,12 @@ public class Configuration { // klasa configuration służy do reprezentacji pli
 
     public Date getReleased() {
         return released;
+    }
+
+    public LocalDate getReleasedLocal() {
+        return LocalDate.of(released.getYear(),
+                released.getMonth(),
+                released.getDay());
     }
 
     public void setReleased(Date released) {
@@ -47,9 +64,10 @@ public class Configuration { // klasa configuration służy do reprezentacji pli
     public String toString() {
         return "Configuration{" +
                 "version='" + version + '\'' +
-                ", released=" + released +
+                ", released=" + getReleasedLocal() +
                 ", users=" + users +
                 ", fileExtensions=" + fileExtensions +
+                ", bestSongs=" + bestSongs +
                 '}';
     }
 }

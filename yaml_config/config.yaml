@@ -11,3 +11,11 @@ fileExtensions:
 users:
     adrian: admin
     bogdan: normal
+
+bestSongs:
+    pop:
+      - Thriller
+      - Some title
+    jazz:
+      - Title 1
+      - Title 2
