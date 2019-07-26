@@ -32,7 +32,69 @@ Czy zostały zwrócone jakieś błędy? Poszukaj w internecie, dlaczego tak się
 dzieje. Słowa kluczowe: java autoboxing.
 
 ## Tablice i pętle
-Ćwiczenia z tablicami 1 i 2 wymiarowymi.
+Ćwiczenia z pętlami tablicami 1 i 2 wymiarowymi.
+
+##### Trójkąt
+Napisać metodę rysującą trójkąt z gwiazdek dla zadanego n. Np, dla n=6
+````
+******
+*****
+****
+***
+**
+*
+````
+
+##### Trójkąt odwrócony
+
+Napisać metodę rysującą odwrócony trójkat z gwiazdek dla zadanego n, Np: dla n=6:
+````
+******
+ *****
+  ****
+   ***
+    **
+     *
+````
+Wskazówka: da się rysować puste znaki: " "
+
+##### Szachownica
+
+Napisac metodę rysujSzachwnice2, ktora dla zadanej liczby n narysuje szachownicę n * n, np: dla n=4
+````
+*#*#
+#*#*
+*#*#
+#*#*
+````
+
+##### Szachownica obrysowana ramką
+
+do zadania poprzedniego, szachownicę obrysować ramką (kody ASCII znaków to 205═ 186║, 187╗ 188╝ 200╚ 201╔:
+````
+╔════╗
+║*#*#║
+║#*#*║
+║*#*#║
+║#*#*║
+╚════╝
+````
+
+##### Szachownica z polami 2x2
+
+Napisać metodę rysujSzachwnice2, która dla zadanej liczby n narysuje szachownicę n * n,
+przy czym każde pole składa się z czterech znaków. Np, dla n=4 (tu przyjęto, że ciemne pole to #, a jasne *
+
+````
+**##**##
+**##**##
+##**##**
+##**##**
+**##**##
+**##**##
+##**##**
+##**##**  
+````
 
 ##### Operacje
 Stwórz tablice dla wszystkich podstawowych liczbowych typów prymitywnych. 
@@ -40,7 +102,7 @@ Stwórz klasę, która ma metody ``sum``, ``multiply``, ``divide``, które
 odpowiednio zsumują, pomnożą i podzielą wszystkie liczby i zwrócą wynik 
 odpowiedniego typu.
 
-##### Szachownica
+##### Szachownica w tablicy
 Stworzyć arraya 2D typu ``String[][]``. Każda komórka tej szachownicy ma 
 zawierać znak ``X`` albo ``O`` (X - czarne pole, O - białe pole). Tak samo 
 jak w prawdziwej szachownicy. Następnie wyświetlić tę szachownice na stdout.
