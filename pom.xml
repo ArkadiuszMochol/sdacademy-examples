@@ -36,7 +36,8 @@
 		<module>28_design_patterns</module>
 		<module>db</module>
 		<module>twitter</module>
-	</modules>
+        <module>_30_spring_core</module>
+    </modules>
 	<packaging>pom</packaging>
 	<name>sdacademy-examples</name>
 

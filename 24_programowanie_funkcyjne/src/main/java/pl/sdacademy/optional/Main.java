@@ -23,12 +23,12 @@ public class Main {
         User ktos = new User("Adam", "Kowalski", 24);
         ktos = null;
         //zad 1 utwórz optional dla usera "ktoś"
-        //zad 2 jeżeli user w optionalu jest = null, wyświetl usera z danymi
-        //      (imie="NN", nazwisko="NN", wiek=-1)
-        //zad 3 pewna baza danych potrzebuje imiona i nazwiska pisane z wielkiej litery.
-        //     Przetworz usera na string ale pisany wielkimi literami.
-        //     Wyswietl go jeżeli nie jest nullem
-        //zad 4 Sprawdz czy user ktos jest starszy niz 20 lat, potem niz 30 lat.
-        //     Jesli nie spełnia tego warunku - usuń go.
+        //        //zad 2 jeżeli user w optionalu jest = null, wyświetl usera z danymi
+        //        //      (imie="NN", nazwisko="NN", wiek=-1)
+        //        //zad 3 pewna baza danych potrzebuje imiona i nazwiska pisane z wielkiej litery.
+        //        //     Przetworz usera na string ale pisany wielkimi literami.
+        //        //     Wyswietl go jeżeli nie jest nullem
+        //        //zad 4 Sprawdz czy user ktos jest starszy niz 20 lat, potem niz 30 lat.
+        //        //     Jesli nie spełnia tego warunku - usuń go.
     }
 }
