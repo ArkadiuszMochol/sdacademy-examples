@@ -1,17 +1,24 @@
 package pl.sdacademy.algorithms.basic;
 
+import pl.sdacademy.structures.User;
+
 public class WarmUp {
     public static void main(String[] args) {
 //        int [] array = new int[10]; //to jest pusta tablica - pomieści 10 elementów (o indeksach od 0 do 9)
-        int [] array2 = {10, 29, 34, 23, 435, 45, 56, 34, 54, 65}; //to jest już zainicjalizowana wartościami tablica, jej wielkość jest automatycznie obliczona - w tym przypadku ma też 10 elementów
-
+//        int [] array2 = {10, 29, 34, 23, 435, 45, 56, 34, 54, 65}; //to jest już zainicjalizowana wartościami tablica, jej wielkość jest automatycznie obliczona - w tym przypadku ma też 10 elementów
 //        String text = "Hello";
 //        System.out.println(String.valueOf(text.toCharArray()));
 //        System.out.println(String.format("Czy osoba jest dorosła? %b", isAdult(15)));
 //        System.out.println(String.format("Jak masz na imię? %s A czy jest dorosły? %b bo ma lat %d", getMyName(), isAdult(29), getMyAge()));
-        String formattedNumbers = printArray(array2);
-        System.out.println(formattedNumbers);
-    }
+//        String formattedNumbers = printArray(array2);
+//        System.out.println(formattedNumbers);
+
+        System.out.println(User.getCounter());
+        User user = User.getUser(1, "Andrzej", "Zaucha");
+        System.out.println(User.getCounter());
+        user.getUser(1, "Monika", "Zaucha");
+        System.out.println(User.getCounter());
+}
 
     public static String printArray(int [] array) {
         String result = "";

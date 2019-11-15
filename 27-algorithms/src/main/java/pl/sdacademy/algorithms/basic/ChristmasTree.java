@@ -1,5 +1,8 @@
 package pl.sdacademy.algorithms.basic;
 
+
+import pl.sdacademy.structures.User;
+
 public class ChristmasTree {
 
     public static void main(String[] args) {
