@@ -3,7 +3,7 @@ package pl.sdacademy.exercises.datingapp;
 import java.util.List;
 import java.util.Objects;
 
-public class User {
+public class User implements Comparable<User> {
     private String name;
     private String lastName;
     private boolean isFemale;
@@ -64,5 +64,12 @@ public class User {
     @Override
     public int hashCode() {
         return Objects.hash(name, lastName, isFemale, age, interests);
+    }
+
+    @Override
+    public int compareTo(User user) {
+//        return name.compareTo(user.getName());
+        return Integer.valueOf(age).compareTo(user.getAge());
+//        return Integer.compare(age, user.getAge());
     }
 }
