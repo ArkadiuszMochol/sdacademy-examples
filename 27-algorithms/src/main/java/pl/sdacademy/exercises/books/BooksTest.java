@@ -1,11 +1,9 @@
 package pl.sdacademy.exercises.books;
 
+import com.google.common.collect.Lists;
 import pl.sdacademy.exercises.books.model.Book;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class BooksTest {
@@ -62,8 +60,9 @@ public class BooksTest {
         authors.addAll()
 
                 ...
-
+        Lists.newArrayList(authors);
         return authors.size();
+
     }
 
 }
