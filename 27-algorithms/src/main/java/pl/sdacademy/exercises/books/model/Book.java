@@ -28,7 +28,8 @@ public class Book {
     }
 
     public LocalDate getPublishedDate() {
-        return publishedDate != null ? publishedDate.getDate() : null;
+        LocalDate date = (publishedDate != null) ? (publishedDate.getDate()) : (null);
+        return date;
     }
 
     public String getThumbnailUrl() {

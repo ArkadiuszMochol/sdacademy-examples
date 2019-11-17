@@ -15,13 +15,23 @@ public class BooksTest {
         //books.stream().map(Book::getTitle).forEach(System.out::println);
 
         //showAuthors(books, 100);
-        List<Book> javaBooks = getBooksForCategory(books, "Java");
+//        List<Book> javaBooks = getBooksForCategory(books, "Java");
+//
+//        for (Book book : javaBooks) {
+//            System.out.println(String.format("Książka %s ma kategorie %s",
+//                book.getTitle(), book.getCategories()));
+//        }
 
-        for (Book book : javaBooks) {
-            System.out.println(String.format("Książka %s ma kategorie %s",
-                book.getTitle(), book.getCategories()));
-        }
+//        System.out.println("Liczba autorów w książkach (używając Set): "
+//                + getAuthorsCountUsingSet(books));
+//        System.out.println("Liczba autorów w książkach (używając List): "
+//                + getAuthorsCountUsingList(books));
 
+//        List<Book> armstrongsBooks = getBooksForAuthor(books, "Peter Armstrong");
+//        for (Book book : armstrongsBooks) {
+//            System.out.println(String.format("Książka %s ma autorów %s",
+//                book.getTitle(), book.getAuthors()));
+//        }
     }
 
     // zadanie 2
@@ -33,15 +43,17 @@ public class BooksTest {
             }
         }
     }
+
     public static void showAuthorsStream(List<Book> books, int minPageCount) {
         books.stream().filter(book -> book.getPageCount() > minPageCount)
                 .forEach(book -> System.out.println(String.format("Książka %s ma %d stron",
                         book.getTitle(), book.getPageCount())));
     }
+
     // zadanie 5
     public static List<Book> getBooksForCategory(List<Book> books, String category) {
         List<Book> booksForCategory = new ArrayList<>();
-        for(Book book : books) {
+        for (Book book : books) {
             if (book.getCategories().contains(category)) {
                 booksForCategory.add(book);
             }
@@ -55,14 +67,24 @@ public class BooksTest {
     }
 
     // zadanie 3
-    public static int getAuthorsCount(List<Book> books) {
+    public static int getAuthorsCountUsingSet(List<Book> books) {
         Set<String> authors = new HashSet<>();
-        authors.addAll()
-
-                ...
-        Lists.newArrayList(authors);
+        for (Book book : books) {
+            authors.addAll(book.getAuthors());
+        }
         return authors.size();
+    }
 
+    public static int getAuthorsCountUsingList(List<Book> books) {
+        List<String> authors = new ArrayList<>();
+        for (Book book : books) {
+            for (String author : book.getAuthors()) {
+                if (!authors.contains(author)) {
+                    authors.add(author);
+                }
+            }
+        }
+        return authors.size();
     }
 
 }
